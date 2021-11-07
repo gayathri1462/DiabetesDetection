@@ -251,7 +251,7 @@ def main():
             result = prediction(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin,BMI, DiabetesPedigreeFunction, Age)
             if result == 0:
                 st.success('The Patient is Not Diabetic')
-            if result == 1:
+            elif result == 1:
                 st.success('The Patient is Diabetic')
 
 
