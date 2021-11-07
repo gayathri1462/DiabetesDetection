@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Plots
-#import seaborn as sns
+import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.offline as py
 import plotly.graph_objs as go
