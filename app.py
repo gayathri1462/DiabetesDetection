@@ -252,7 +252,7 @@ def main():
             if result == 0:
                 st.success('The Patient is Not Diabetic')
             if result == 1:
-                st.failure('The Patient is Diabetic')
+                st.success('The Patient is Diabetic')
 
 
 if __name__=='__main__':
