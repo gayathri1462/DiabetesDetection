@@ -2,3 +2,4 @@ seaborn
 matplotlib
 plotly
 imblearn
+xgboost
