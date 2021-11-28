@@ -115,8 +115,8 @@ def main():
         st.subheader("Dataset Description")
         st.write(diabetes_data.describe())
         st.header("Target Variable")
-        st.write('Non-Diabetic Cases: {}'.format(len(Non_Diabetic)))
-        st.write('Diabetic Cases: {}'.format(len(Diabetic)))
+        st.write('Non-Diabetic Cases: 500')
+        st.write('Diabetic Cases: 268')
         trace = go.Pie(labels = ['Non_diabetic','diabetic'], values = diabetes_data['Outcome'].value_counts(), 
                    textfont=dict(size=15), opacity = 0.8,
                    marker=dict(colors=['green', 'red'], 
@@ -124,7 +124,7 @@ def main():
         layout = dict(title =  'Distribution of Outcome variable')
         fig = dict(data = [trace], layout=layout)
         st.write(fig)
-        # 2 datasets
+
     if add_pages=='Data Preprocessing':
         st.header("Missing Values")
         diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.NaN)
@@ -251,7 +251,7 @@ def main():
             result = prediction(Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin,BMI, DiabetesPedigreeFunction, Age)
             if result == 0:
                 st.success('The Patient is Not Diabetic')
-            elif result == 1:
+            if result == 1:
                 st.success('The Patient is Diabetic')
 
 
